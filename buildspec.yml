@@ -13,7 +13,6 @@ phases:
       - DEV_NAME=$DEV_NAME
       - export DEV_NAME=$DEV_NAME
       - echo "DEVName is $DEV_NAME"
-      - scripts/create_env.sh
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
@@ -33,4 +32,3 @@ artifacts:
     - node_modules/**/*
     - appspec.yml
     - scripts/**/*
-    - .env

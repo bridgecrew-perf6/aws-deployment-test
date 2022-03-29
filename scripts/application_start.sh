@@ -7,6 +7,7 @@ sudo chmod -R 777 /home/ec2-user/express-app
 cd /home/ec2-user/express-app
 
 echo $DEV_NAME
+export DEV_NAME="$DEV_NAME"
 
 #add npm and node to path
 export NVM_DIR="$HOME/.nvm"

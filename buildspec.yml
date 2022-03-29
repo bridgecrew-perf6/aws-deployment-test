@@ -9,6 +9,8 @@ phases:
       - npm install -g mocha
   pre_build:
     commands:
+      - printenv > .env
+      - echo "DEV_NAME IS $DEV_NAME"
       - echo Installing source NPM dependencies...
       - npm install
   build:

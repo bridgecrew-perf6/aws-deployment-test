@@ -12,6 +12,7 @@ phases:
       - npm install -g mocha
   pre_build:
     commands:
+      - echo 'DEVName is $DEV_NAME '
       - echo Installing source NPM dependencies...
       - npm install
   build:

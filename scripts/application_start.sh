@@ -6,9 +6,6 @@ sudo chmod -R 777 /home/ec2-user/express-app
 #navigate into our working directory where we have all our github files
 cd /home/ec2-user/express-app
 
-echo $DEV_NAME
-export DEV_NAME="$DEV_NAME"
-
 #add npm and node to path
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # loads nvm

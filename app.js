@@ -4,7 +4,7 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
-    res.send(`AWS deployment test name: ${process.env.DEV_NAME}`)
+    res.send(`AWS deployment test name: ${process.env.DEV_NAME}<br/><pre>${JSON.stringify(process.env, null, 2)}</pre>`)
 })
 
 app.listen(port, () => {

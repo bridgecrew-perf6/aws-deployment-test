@@ -2,7 +2,7 @@
 version: 0.2
 env:
   variables:
-    DEV_NAME: $DEV_NAME
+    DEV_NAME: "aily elora"
 phases:
   install:
     runtime-versions:

@@ -1,8 +1,8 @@
 # Do not change version. This is the version of aws buildspec, not the version of your buldspec file.
 version: 0.2
 env:
-  parameter-store:
-    DEV_NAME: "dev_name"
+  variables:
+    DEV_NAME: $DEV_NAME
 phases:
   install:
     runtime-versions:
@@ -12,8 +12,6 @@ phases:
       - npm install -g mocha
   pre_build:
     commands:
-      - printenv > .env
-      - echo "DEV_NAME IS $DEV_NAME"
       - echo Installing source NPM dependencies...
       - npm install
   build:

@@ -17,6 +17,8 @@ phases:
       - npm install
   build:
     commands:
+      - DEV_NAME=$DEV_NAME
+      - export DEV_NAME=$DEV_NAME
       - echo Build started on `date`
       - echo Compiling the Node.js code
   post_build:

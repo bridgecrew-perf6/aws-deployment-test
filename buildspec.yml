@@ -3,6 +3,7 @@ version: 0.2
 env:
   variables:
     DEV_NAME: "aily elora"
+    PORT: "8000"
 phases:
   install:
     runtime-versions:
@@ -14,6 +15,7 @@ phases:
       - export DEV_NAME=$DEV_NAME
       - echo "DEVName is $DEV_NAME"
       - echo "DEV_NAME=$DEV_NAME" > .env
+      - echo "NODE ENV = $NODE_ENV"
   pre_build:
     commands:
       - echo Installing source NPM dependencies...

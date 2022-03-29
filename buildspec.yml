@@ -10,15 +10,15 @@ phases:
     commands:
       - echo Installing Mocha...
       - npm install -g mocha
+      - DEV_NAME=$DEV_NAME
+      - export DEV_NAME=$DEV_NAME
+      - echo "DEVName is $DEV_NAME"
   pre_build:
     commands:
-      - echo "DEVName is $DEV_NAME"
       - echo Installing source NPM dependencies...
       - npm install
   build:
     commands:
-      - DEV_NAME=$DEV_NAME
-      - export DEV_NAME=$DEV_NAME
       - echo Build started on `date`
       - echo Compiling the Node.js code
   post_build:
